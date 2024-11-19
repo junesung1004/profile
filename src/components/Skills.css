@@ -1,0 +1,20 @@
+/* 애니메이션 정의 */
+@keyframes fillWidth {
+  0% {
+    width: 0%; /* 시작할 때 width가 0% */
+  }
+  100% {
+    width: 100%; /* 끝날 때 width가 100% */
+  }
+}
+
+/* 애니메이션을 적용할 클래스 */
+.animate-fillWidth {
+  animation: fillWidth 3s ease-out forwards; /* 4초 동안 애니메이션 실행 */
+}
+
+span {
+  padding: 7px 20px;
+  background-color: aqua;
+  border-radius: 10px;
+}

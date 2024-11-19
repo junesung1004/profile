@@ -1,13 +1,64 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "notosans";
+  src: url("/public/NotoSansKR-VariableFont_wght.ttf");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: "DungGeunMo";
+  src: url("/public/DungGeunMo.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body * {
+  font-family: "notosans";
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+ul,
+ol {
+  list-style: none;
+  cursor: pointer;
+}
+
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  /* background-color: rgb(246, 246, 246); */
+}
+
+/* header 스타일 */
+header a {
+  position: relative;
+  text-decoration: none;
+}
+
+header li {
+  position: relative;
+  padding-bottom: 5px;
+}
+
+header li::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: rgba(38, 218, 235, 1); /* 원하는 색 */
+  left: 0;
+  bottom: 0;
+  transition: width 0.5s ease; /* 애니메이션 효과 */
+}
+
+header li:hover::after {
+  width: 100%; /* 호버 시 밑줄이 완전히 확장 */
 }

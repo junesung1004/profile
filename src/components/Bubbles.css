@@ -1,0 +1,62 @@
+/* 버블들 전체 컨테이너 설정 */
+.bubbles {
+  position: fixed; /* 화면에 고정 */
+  bottom: 0; /* 화면 아래에 고정 */
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -99;
+  pointer-events: none; /* 클릭 이벤트 방지 */
+  overflow: hidden;
+}
+
+/* 각 버블 설정 */
+.bubbles span {
+  display: inline-block;
+  position: absolute; /* 절대 위치 설정 */
+  border-radius: 50%; /* 원형 모양 */
+  opacity: 0; /* 처음에는 보이지 않게 */
+  animation: bubbleUp 15s ease-in-out infinite;
+}
+
+/* 다양한 색상 설정 */
+.bubbles .purple {
+  background-color: #d9d7f1;
+}
+
+.bubbles .yellow {
+  background-color: #fffdde;
+}
+
+.bubbles .green {
+  background-color: #e7fbbe;
+}
+
+.bubbles .pink {
+  background-color: #ffcbcb;
+}
+
+.bubbles .blue {
+  background-color: #d6e5fa;
+}
+
+/* 버블이 아래에서 위로 떠오르는 애니메이션 */
+@keyframes bubbleUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100vh) scale(0.5); /* 화면 아래에서 시작 */
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0) scale(1); /* 중간에 크기 변화 */
+  }
+  80% {
+    opacity: 0;
+    transform: translateY(-70vh) scale(1.5); /* 화면 위로 올라감 */
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-100vh) scale(1.5); /* 화면 위로 올라감 */
+  }
+}
