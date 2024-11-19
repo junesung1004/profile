@@ -1,12 +1,27 @@
+import { useEffect } from "react";
 import "./Skills.css";
 
 const Skills: React.FC = () => {
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        } else {
+          entry.target.classList.remove("show");
+        }
+      });
+    });
+    const elements = document.querySelectorAll(".hide");
+    elements.forEach((el) => observer.observe(el));
+  }, []);
+
   return (
     <section className="flex flex-col justify-center items-center w-7/12 mb-32 p-30 m-auto">
-      <h1 className="text-6xl font-bold mb-20">⚡ Skills</h1>
+      <h1 className="text-6xl font-bold mb-20 hide">⚡ Skills</h1>
       <article className="flex flex-col w-full gap-6 mb-20">
         {/* 하나의 아이템 */}
-        <div className="flex  flex-wrap items-center">
+        <div className="flex flex-wrap items-center hide ">
           <p className="text-xl font-bold text-center min-w-[240px] w-52 mb-2">HTML</p>
           <div className="flex flex-1 border shadow-xl w-full h-10 rounded-lg">
             <div className="flex items-center w-10/12 h-full  rounded-r-full">
@@ -18,7 +33,7 @@ const Skills: React.FC = () => {
         </div>
 
         {/* 하나의 아이템 */}
-        <div className="flex flex-wrap items-center">
+        <div className="flex flex-wrap items-center hide">
           <p className="text-xl font-bold text-center min-w-[240px] w-52 mb-2">CSS</p>
           <div className="flex flex-1 border shadow-xl w-full h-10 rounded-lg">
             <div className="flex items-center w-10/12 h-full  rounded-r-full">
@@ -30,7 +45,7 @@ const Skills: React.FC = () => {
         </div>
 
         {/* 하나의 아이템 */}
-        <div className="flex flex-wrap items-center">
+        <div className="flex flex-wrap items-center hide">
           <p className="text-xl font-bold text-center min-w-[240px] w-52 mb-2">JavaScript</p>
           <div className="flex flex-1 border shadow-xl w-full h-10 rounded-lg">
             <div className="flex items-center w-8/12 h-full  rounded-r-full">
@@ -42,7 +57,7 @@ const Skills: React.FC = () => {
         </div>
 
         {/* 하나의 아이템 */}
-        <div className="flex flex-wrap items-center">
+        <div className="flex flex-wrap items-center hide">
           <p className="text-xl font-bold text-center min-w-[240px] w-52 mb-2">jQuery</p>
           <div className="flex flex-1 border shadow-xl w-full h-10 rounded-lg">
             <div className="flex items-center w-4/12 h-full  rounded-r-full">
@@ -54,7 +69,7 @@ const Skills: React.FC = () => {
         </div>
 
         {/* 하나의 아이템 */}
-        <div className="flex flex-wrap items-center">
+        <div className="flex flex-wrap items-center hide">
           <p className="text-xl font-bold text-center min-w-[240px] w-52 mb-2">React</p>
           <div className="flex flex-1 border shadow-xl w-full h-10 rounded-lg">
             <div className="flex items-center w-8/12 h-full  rounded-r-full">
@@ -66,7 +81,7 @@ const Skills: React.FC = () => {
         </div>
 
         {/* 하나의 아이템 */}
-        <div className="flex flex-wrap items-center">
+        <div className="flex flex-wrap items-center hide">
           <p className="text-xl font-bold text-center min-w-[240px] w-52 mb-2">TypeScript</p>
           <div className="flex flex-1 border shadow-xl w-full h-10 rounded-lg">
             <div className="flex items-center w-4/12 h-full  rounded-r-full">
@@ -78,7 +93,7 @@ const Skills: React.FC = () => {
         </div>
 
         {/* 하나의 아이템 */}
-        <div className="flex flex-wrap items-center">
+        <div className="flex flex-wrap items-center hide">
           <p className="text-xl font-bold text-center min-w-[240px] w-52 mb-2">Next.js</p>
           <div className="flex flex-1 border shadow-xl w-full h-10 rounded-lg">
             <div className="flex items-center w-4/12 h-full  rounded-r-full">
@@ -90,7 +105,7 @@ const Skills: React.FC = () => {
         </div>
 
         {/* 하나의 아이템 */}
-        <div className="flex flex-wrap items-center">
+        <div className="flex flex-wrap items-center hide">
           <p className="text-xl font-bold text-center min-w-[240px] w-52 mb-2">Styled-Component</p>
           <div className="flex flex-1 border shadow-xl w-full h-10 rounded-lg">
             <div className="flex items-center w-9/12 h-full  rounded-r-full">
@@ -102,7 +117,7 @@ const Skills: React.FC = () => {
         </div>
 
         {/* 하나의 아이템 */}
-        <div className="flex flex-wrap items-center">
+        <div className="flex flex-wrap items-center hide">
           <p className="text-xl font-bold text-center min-w-[240px] w-52 mb-2">SCSS</p>
           <div className="flex flex-1 border shadow-xl w-full h-10 rounded-lg">
             <div className="flex items-center w-10/12 h-full  rounded-r-full">
@@ -114,7 +129,7 @@ const Skills: React.FC = () => {
         </div>
 
         {/* 하나의 아이템 */}
-        <div className="flex flex-wrap items-center">
+        <div className="flex flex-wrap items-center hide">
           <p className="text-xl font-bold text-center min-w-[240px] w-52 mb-2">Tailwind</p>
           <div className="flex flex-1 border shadow-xl w-full h-10 rounded-lg">
             <div className="flex items-center w-5/12 h-full  rounded-r-full">
@@ -126,7 +141,7 @@ const Skills: React.FC = () => {
         </div>
 
         {/* 하나의 아이템 */}
-        <div className="flex flex-wrap items-center">
+        <div className="flex flex-wrap items-center hide">
           <p className="text-xl font-bold text-center min-w-[240px] w-52 mb-2">Bootstrap</p>
           <div className="flex flex-1 border shadow-xl w-full h-10 rounded-lg">
             <div className="flex items-center w-6/12 h-full  rounded-r-full">
@@ -138,7 +153,7 @@ const Skills: React.FC = () => {
         </div>
 
         {/* 하나의 아이템 */}
-        <div className="flex flex-wrap items-center">
+        <div className="flex flex-wrap items-center hide">
           <p className="text-xl font-bold text-center min-w-[240px] w-52 mb-2">C</p>
           <div className="flex flex-1 border shadow-xl w-full h-10 rounded-lg">
             <div className="flex items-center w-4/12 h-full  rounded-r-full">
@@ -150,7 +165,7 @@ const Skills: React.FC = () => {
         </div>
 
         {/* 하나의 아이템 */}
-        <div className="flex flex-wrap items-center">
+        <div className="flex flex-wrap items-center hide">
           <p className="text-xl font-bold text-center min-w-[240px] w-52 mb-2">C++</p>
           <div className="flex flex-1 border shadow-xl w-full h-10 rounded-lg">
             <div className="flex items-center w-4/12 h-full  rounded-r-full">
@@ -162,7 +177,7 @@ const Skills: React.FC = () => {
         </div>
 
         {/* 하나의 아이템 */}
-        <div className="flex flex-wrap items-center">
+        <div className="flex flex-wrap items-center hide">
           <p className="text-xl font-bold text-center min-w-[240px] w-52 mb-2">C#</p>
           <div className="flex flex-1 border shadow-xl w-full h-10 rounded-lg">
             <div className="flex items-center w-4/12 h-full  rounded-r-full">
@@ -179,7 +194,7 @@ const Skills: React.FC = () => {
       {/*  */}
       <article className="flex flex-col w-full border shadow-md p-6 rounded-lg gap-7">
         {/* 아이템 */}
-        <div className="flex flex-wrap items-center gap-7">
+        <div className="flex flex-wrap items-center hide gap-7">
           <div className="flex items-center gap-3 w-40">
             <img src={process.env.PUBLIC_URL + "images/language.svg"} alt="언어로고" width={"40px"} height={"40px"} />
             <p className="font-bold text-lg  ">Language</p>
@@ -195,7 +210,7 @@ const Skills: React.FC = () => {
         </div>
 
         {/* 아이템  */}
-        <div className="flex flex-wrap items-center gap-7">
+        <div className="flex flex-wrap items-center hide gap-7">
           <div className="flex items-center gap-3 w-40">
             <img src={process.env.PUBLIC_URL + "images/frontend.svg"} alt="언어로고" width={"40px"} height={"40px"} />
             <p className="font-bold text-lg  ">Frontend</p>
@@ -211,7 +226,7 @@ const Skills: React.FC = () => {
         </div>
 
         {/* 아이템  */}
-        <div className="flex flex-wrap items-center gap-7">
+        <div className="flex flex-wrap items-center hide gap-7">
           <div className="flex items-center gap-3 w-40">
             <img src={process.env.PUBLIC_URL + "images/backend.svg"} alt="언어로고" width={"40px"} height={"40px"} />
             <p className="font-bold text-lg  ">Backend</p>
@@ -225,7 +240,7 @@ const Skills: React.FC = () => {
         </div>
 
         {/* 아이템  */}
-        <div className="flex flex-wrap items-center gap-7">
+        <div className="flex flex-wrap items-center hide gap-7">
           <div className="flex items-center gap-3 w-40">
             <img src={process.env.PUBLIC_URL + "images/infra.svg"} alt="언어로고" width={"40px"} height={"40px"} />
             <p className="font-bold text-lg  ">Infra</p>

@@ -5,6 +5,7 @@ import Dash from "../components/Dash";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Introduce from "../components/Introduce";
+import Project from "../components/Project";
 import Skills from "../components/Skills";
 
 const Home: React.FC = () => {
@@ -18,6 +19,8 @@ const Home: React.FC = () => {
       <Skills />
       <Dash />
       <Archiving />
+      <Dash />
+      <Project />
       <Footer />
       <Bubbles /> {/* 배경화면 컴포넌트 */}
     </div>
