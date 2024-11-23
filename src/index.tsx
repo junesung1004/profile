@@ -8,6 +8,7 @@ import { BrowserRouter } from "react-router-dom";
 //npx tailwindcss init
 //npm i react-router-dom
 //npm install @heroicons/react
+//npm install react-simple-typewriter
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(

@@ -6,11 +6,11 @@ const Header: React.FC = () => {
         <h1 className="text-3xl">PJS's Portfolio</h1>
         <nav>
           <ul className="flex gap-5 text-lg">
-            <li className="relative">About me</li>
+            <li>About me</li>
             <li className="relative">Skills</li>
             <li className="relative">Archiving</li>
             <li className="relative">Project</li>
-            <li className="relative">Career</li>
+            <li className="relative">Education</li>
             <li className="relative">Contact</li>
           </ul>
         </nav>

@@ -1,11 +1,14 @@
 import AboutMe from "../components/AboutMe";
 import Archiving from "../components/Archiving";
+
 import Bubbles from "../components/Bubbles";
+import Contact from "../components/Contact";
 import Dash from "../components/Dash";
+import Education from "../components/Education";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Introduce from "../components/Introduce";
-import Project from "../components/Project";
+import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 
 const Home: React.FC = () => {
@@ -17,10 +20,14 @@ const Home: React.FC = () => {
       <AboutMe />
       <Dash />
       <Skills />
-      <Dash />
+      {/* <Dash /> */}
       <Archiving />
-      <Dash />
-      <Project />
+      {/* <Dash /> */}
+      <Projects />
+      {/* <Dash /> */}
+      <Education />
+      {/* <Dash /> */}
+      <Contact />
       <Footer />
       <Bubbles /> {/* 배경화면 컴포넌트 */}
     </div>
