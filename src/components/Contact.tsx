@@ -1,9 +1,9 @@
 const Contact: React.FC = () => {
   return (
-    <section className="flex flex-col  justify-center items-center gap-16 w-full mb-32  m-auto pb-16">
-      <h1 className="text-2xl sm:text-6xl font-bold mb-0 sm:mb-20 hide w-[400px] text-center ">📧 Contact</h1>
+    <section className="flex flex-col  justify-center items-center gap-16 w-full mb-32  m-auto pb-16 p-10">
+      <h1 className="text-2xl sm:text-6xl font-bold mb-0 sm:mb-20 hide w-[330px] text-center ">📧 Contact</h1>
 
-      <article className="flex flex-wrap items-center gap-16 pt-0 p-10">
+      <article className="flex flex-wrap items-center gap-16">
         <div className="flex-1 flex flex-col items-center gap-3 p-10 sm:p-20 border shadow-lg min-w-[330px] sm:min-w-[360px]">
           <h3 className="font-light text-3xl">C O N T A C T</h3>
           <p className="text-neutral-400">Thank you : )</p>
