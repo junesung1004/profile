@@ -1,6 +1,6 @@
 const Contact: React.FC = () => {
   return (
-    <section className="flex flex-col  justify-center items-center gap-16 w-full mb-32  m-auto p-16">
+    <section className="flex flex-col  justify-center items-center gap-16 w-full mb-32  m-auto pb-16">
       <h1 className="text-6xl font-bold mb-10 hide">📧 Contact</h1>
 
       <article className="flex flex-wrap items-center gap-16 w-9/12">

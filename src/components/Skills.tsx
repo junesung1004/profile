@@ -18,7 +18,7 @@ const Skills: React.FC = () => {
 
   return (
     <section className="flex flex-col justify-center items-center w-7/12 mb-32 p-30 m-auto ">
-      <h1 className="text-6xl font-bold mb-20 hide">⚡ Skills</h1>
+      <h1 className="text-2xl sm:text-6xl font-bold mb-20 hide">⚡ Skills</h1>
       <article className="flex flex-col w-full gap-6 mb-20">
         {/* 하나의 아이템 */}
         <div className="flex flex-wrap items-center hide ">
@@ -192,7 +192,7 @@ const Skills: React.FC = () => {
       </article>
 
       {/*  */}
-      <article className="flex flex-col w-full min-w-[360px] border shadow-md p-6 rounded-lg gap-7">
+      <article className="flex flex-col w-full min-w-[290px] border shadow-md p-6 rounded-lg gap-7">
         {/* 아이템 */}
         <div className="flex flex-wrap items-center hide gap-7">
           <div className="flex items-center gap-3 w-40">

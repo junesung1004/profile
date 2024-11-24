@@ -97,8 +97,8 @@ const Typing: React.FC = () => {
   }, [twoTyping, isResetting]);
   return (
     <div style={{ height: "60px" }} className="flex flex-col justify-center items-center gap-4 z-10">
-      <p className="text-4xl font-dunggeunmo">{firstTyping}</p>
-      <p className="text-3xl font-dunggeunmo">{twoTyping}</p>
+      <p className="text-2xl sm:text-4xl font-dunggeunmo">{firstTyping}</p>
+      <p className="text-xl sm:text-3xl font-dunggeunmo">{twoTyping}</p>
     </div>
   );
 };

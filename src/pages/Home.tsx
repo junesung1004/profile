@@ -15,7 +15,7 @@ const Home: React.FC = () => {
   return (
     <div>
       <Header />
-      <div className="h-80"></div>
+      <div className="h-40 sm:h-80 md:90"></div>
       <Introduce />
       <AboutMe />
       <Dash />
