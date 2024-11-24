@@ -10,7 +10,7 @@ const Header: React.FC = () => {
   return (
     <header className="w-full fixed  z-30 bg-white">
       {/* header nav 부분 */}
-      <div className="flex items-center justify-between md:justify-around sm:justify-between p-6">
+      <div className="flex items-center justify-between md:justify-around sm:justify-between p-6 w-full">
         <h1 className="text-3xl">PJS's Portfolio</h1>
 
         {/* desktop Menu view */}

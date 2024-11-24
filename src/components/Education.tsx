@@ -1,7 +1,7 @@
 const Education: React.FC = () => {
   return (
     <section className="flex flex-col  justify-center items-center gap-16 w-full mb-32  m-auto p-32 bg-[rgba(0,0,0,0.5)]">
-      <h1 className="text-2xl sm:text-6xl font-bold mb-10 sm:mb-20 hide w-[400px] text-center ">🔥 Education</h1>
+      <h1 className="text-2xl sm:text-6xl font-bold mb-10 sm:mb-20 hide w-[330px] text-center ">🔥 Education</h1>
 
       {/* 하나의 폼 */}
       <article className="flex flex-wrap min-w-[290px] sm:min-w-[460px] bg-white w-8/12 items-center  border shadow-xl sm:p-20 p-6 rounded-3xl">
