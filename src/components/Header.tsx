@@ -11,7 +11,9 @@ const Header: React.FC = () => {
     <header className="w-full fixed  z-30 bg-white h-[85px]">
       {/* header nav 부분 */}
       <div className="flex items-center justify-between md:justify-around sm:justify-between p-6 w-full">
-        <h1 className="text-3xl">PJS's Portfolio</h1>
+        <h1 className="text-3xl">
+          <a href="#">PJS's Portfolio</a>
+        </h1>
 
         {/* desktop Menu view */}
         <nav className="hidden md:block">
