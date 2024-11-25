@@ -17,7 +17,9 @@ const Introduce: React.FC = () => {
           프론트엔드 개발자가 되고자 합니다.
         </p>
       </article>
-      <button className="w-40 h-16 rounded-full bg-teal-200 transition duration-500 hover:bg-teal-400 text-white">더 알아보기 ↓</button>
+      <button className="w-40 h-16 rounded-full bg-teal-200 transition duration-500 hover:bg-teal-400 text-white">
+        <a href="#about">더 알아보기 ↓</a>
+      </button>
     </section>
   );
 };

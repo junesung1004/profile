@@ -1,9 +1,8 @@
 interface EducationProps {
-  education : string
+  education: string;
 }
 
-
-const Education: React.FC<EducationProps> = ({education}) => {
+const Education: React.FC<EducationProps> = ({ education }) => {
   return (
     <section id={education} className="flex flex-col  justify-center items-center gap-16 w-full mb-32  m-auto p-32 bg-[rgba(0,0,0,0.5)] scroll-mt-[85px]">
       <h1 className="text-2xl sm:text-6xl font-bold mb-10 sm:mb-20 hide w-[330px] text-center ">🔥 Education</h1>
@@ -50,7 +49,11 @@ const Education: React.FC<EducationProps> = ({education}) => {
       {/* 하나의 폼 */}
       <article className="flex flex-wrap min-w-[290px] sm:min-w-[460px] bg-white w-8/12 items-center  border shadow-xl sm:p-20 p-6 rounded-3xl">
         <div className="flex-2 mr-14">
-          <h2 className="font-bold text-2xl mb-3">코스타(한국소프트웨어기술진흥협회)</h2>
+          <h2 className="font-bold text-2xl mb-3">
+            코스타
+            <br />
+            (한국소프트웨어기술진흥협회)
+          </h2>
           <p className="text-gray-500">2024.07 - 2024.12</p>
         </div>
         <ul className=" flex-1 list-disc p-6 flex flex-col gap-4 text-sm sm:text-lg cursor-default ">

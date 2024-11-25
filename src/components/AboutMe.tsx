@@ -4,7 +4,7 @@ interface AboutMeProps {
 
 const AboutMe: React.FC<AboutMeProps> = ({ about }) => {
   return (
-    <div id={about} className="flex flex-col  items-center w-9/12 gap-4 p-10 border m-auto shadow-xl min-w-[300px] scroll-mt-[85px] ">
+    <div id={about} className="flex flex-col  items-center w-9/12 gap-4 p-10 border m-auto shadow-xl min-w-[300px] scroll-mt-[95px] ">
       {/* about me logo */}
       <h1 className="text-2xl sm:text-6xl font-bold mb-4 sm:mb-20 hide">🔗 ABOUT ME</h1>
 

@@ -46,14 +46,26 @@ const Header: React.FC = () => {
       </div>
       {/* mobile menu상태이고 햄버거 모양아이콘 클릭했을때 나오는 nav태그들*/}
       {isMenuOpen && (
-        <nav className="md:hidden mt-4  pr-6 pt-3  h-[320px] border shadow-lg">
+        <nav className="md:hidden  pr-6 pt-3  h-[320px] border shadow-lg bg-white">
           <ul className="flex flex-col gap-5 text-lg items-end ">
-            <li className="relative text-gray-500 hover:text-gray-900 transition duration-300">About me</li>
-            <li className="relative text-gray-500 hover:text-gray-900 transition duration-300">Skills</li>
-            <li className="relative text-gray-500 hover:text-gray-900 transition duration-300">Archiving</li>
-            <li className="relative text-gray-500 hover:text-gray-900 transition duration-300">Project</li>
-            <li className="relative text-gray-500 hover:text-gray-900 transition duration-300">Education</li>
-            <li className="relative text-gray-500 hover:text-gray-900 transition duration-300">Contact</li>
+            <li className="relative text-gray-500 hover:text-gray-900 transition duration-300">
+              <a href={"#about"}>About me</a>
+            </li>
+            <li className="relative text-gray-500 hover:text-gray-900 transition duration-300">
+              <a href="#skills">Skills</a>
+            </li>
+            <li className="relative text-gray-500 hover:text-gray-900 transition duration-300">
+              <a href={"#archiving"}>Archiving</a>
+            </li>
+            <li className="relative text-gray-500 hover:text-gray-900 transition duration-300">
+              <a href="#projects">Project</a>
+            </li>
+            <li className="relative text-gray-500 hover:text-gray-900 transition duration-300">
+              <a href="#education">Education</a>
+            </li>
+            <li className="relative text-gray-500 hover:text-gray-900 transition duration-300">
+              <a href="#contact">Contact</a>
+            </li>
           </ul>
         </nav>
       )}
