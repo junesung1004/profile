@@ -1,7 +1,11 @@
 import { useEffect } from "react";
 import "./Skills.css";
 
-const Skills: React.FC = () => {
+interface SkillsProps {
+  skills: string;
+}
+
+const Skills: React.FC<SkillsProps> = ({ skills }) => {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -17,9 +21,9 @@ const Skills: React.FC = () => {
   }, []);
 
   return (
-    <section className="flex flex-col justify-center items-center w-7/12 mb-32 p-30 m-auto ">
+    <section id={skills} className="flex flex-col justify-center items-center w-7/12 mb-32 p-30 m-auto scroll-mt-[85px]">
       <h1 className="text-2xl sm:text-6xl font-bold mb-20 hide">⚡ Skills</h1>
-      <article className="flex flex-col w-full gap-6 mb-20">
+      <article className="hidden flex-col w-full gap-6 lg:flex mb-20">
         {/* 하나의 아이템 */}
         <div className="flex flex-wrap items-center hide ">
           <p className="text-xl font-bold text-center min-w-[240px] w-52 mb-2">HTML</p>

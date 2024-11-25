@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
 
-const Archiving: React.FC = () => {
+interface ArchivingProps {
+  archiving: string;
+}
+
+const Archiving: React.FC<ArchivingProps> = ({ archiving }) => {
   return (
-    <section className="bg-[rgba(0,0,0,0.5)] flex flex-col justify-center items-center w-full mb-2 sm:mb-32 p-32  m-auto">
+    <section id={archiving} className="bg-[rgba(0,0,0,0.5)] flex flex-col justify-center items-center w-full mb-2 sm:mb-32 p-32  m-auto scroll-mt-[85px]">
       <h1 className="text-2xl sm:text-6xl font-bold mb-10 sm:mb-20 hide w-[330px] text-center ">👨‍💻 Archiving</h1>
 
       <article className="flex flex-wrap justify-center w-2/3 gap-20">

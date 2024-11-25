@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -8,7 +9,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="w-full fixed  z-30 bg-white">
+    <header className="w-full fixed  z-30 bg-white h-[85px]">
       {/* header nav 부분 */}
       <div className="flex items-center justify-between md:justify-around sm:justify-between p-6 w-full">
         <h1 className="text-3xl">PJS's Portfolio</h1>
@@ -16,12 +17,24 @@ const Header: React.FC = () => {
         {/* desktop Menu view */}
         <nav className="hidden md:block">
           <ul className="flex gap-5 text-lg">
-            <li className="relative text-gray-500 hover:text-gray-900 transition duration-300">About me</li>
-            <li className="relative text-gray-500 hover:text-gray-900 transition duration-300">Skills</li>
-            <li className="relative text-gray-500 hover:text-gray-900 transition duration-300">Archiving</li>
-            <li className="relative text-gray-500 hover:text-gray-900 transition duration-300">Project</li>
-            <li className="relative text-gray-500 hover:text-gray-900 transition duration-300">Education</li>
-            <li className="relative text-gray-500 hover:text-gray-900 transition duration-300">Contact</li>
+            <li className="relative text-gray-500 hover:text-gray-900 transition duration-300">
+              <a href={"#about"}>About me</a>
+            </li>
+            <li className="relative text-gray-500 hover:text-gray-900 transition duration-300">
+              <a href="#skills">Skills</a>
+            </li>
+            <li className="relative text-gray-500 hover:text-gray-900 transition duration-300">
+              <a href={"#archiving"}>Archiving</a>
+            </li>
+            <li className="relative text-gray-500 hover:text-gray-900 transition duration-300">
+              <a href="#projects">Project</a>
+            </li>
+            <li className="relative text-gray-500 hover:text-gray-900 transition duration-300">
+              <a href="#education">Education</a>
+            </li>
+            <li className="relative text-gray-500 hover:text-gray-900 transition duration-300">
+              <a href="#contact">Contact</a>
+            </li>
           </ul>
         </nav>
 

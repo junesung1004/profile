@@ -1,6 +1,10 @@
-const AboutMe: React.FC = () => {
+interface AboutMeProps {
+  about: string;
+}
+
+const AboutMe: React.FC<AboutMeProps> = ({ about }) => {
   return (
-    <div className="flex flex-col  items-center w-9/12 gap-4 p-10 border m-auto shadow-xl min-w-[300px]">
+    <div id={about} className="flex flex-col  items-center w-9/12 gap-4 p-10 border m-auto shadow-xl min-w-[300px] scroll-mt-[85px] ">
       {/* about me logo */}
       <h1 className="text-2xl sm:text-6xl font-bold mb-4 sm:mb-20 hide">🔗 ABOUT ME</h1>
 
@@ -46,7 +50,7 @@ const AboutMe: React.FC = () => {
           {/* 하나의 아이템 */}
           <li className="flex items-center gap-6">
             <p className="text-xl sm:text-3xl">💲</p>
-            <p className="text-base sm:text-xl">희망연봉 : 3600..↑</p>
+            <p className="text-base sm:text-xl">희망연봉 : 2900↑</p>
           </li>
         </ul>
       </div>

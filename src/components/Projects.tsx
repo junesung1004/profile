@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
 
-const Projects: React.FC = () => {
+interface ProjectsProps {
+  projects: string;
+}
+
+const Projects: React.FC<ProjectsProps> = ({ projects }) => {
   return (
-    <section className="flex flex-col  justify-center items-center gap-16 w-full mb-32  m-auto p-16">
+    <section id={projects} className="flex flex-col  justify-center items-center gap-16 w-full mb-32  m-auto p-16 scroll-mt-[85px]">
       <h1 className="text-2xl sm:text-6xl font-bold mb-0 sm:mb-20 hide w-[330px] text-center ">⭐ Projects</h1>
 
       <div className="flex flex-wrap justify-center gap-10 w-9/12">

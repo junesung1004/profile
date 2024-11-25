@@ -17,17 +17,17 @@ const Home: React.FC = () => {
       <Header />
       <div className="h-40 sm:h-80 md:90"></div>
       <Introduce />
-      <AboutMe />
+      <AboutMe about={"about"} />
       <Dash />
-      <Skills />
+      <Skills skills={"skills"} />
       {/* <Dash /> */}
-      <Archiving />
+      <Archiving archiving={"archiving"} />
       {/* <Dash /> */}
-      <Projects />
+      <Projects projects={"projects"} />
       {/* <Dash /> */}
-      <Education />
+      <Education education={"education"} />
       {/* <Dash /> */}
-      <Contact />
+      <Contact contact={"contact"} />
       <Footer />
       <Bubbles /> {/* 배경화면 컴포넌트 */}
     </div>
