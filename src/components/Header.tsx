@@ -1,38 +1,75 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Header: React.FC = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const { pathname } = useLocation();
+  console.log("pathname : ", pathname);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const aboutRef = useRef<HTMLDivElement>(null);
+  const skillsRef = useRef<HTMLDivElement>(null);
+  const archivingRef = useRef<HTMLDivElement>(null);
+  const projectsRef = useRef<HTMLDivElement>(null);
+  const educationRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
 
   const clickToggleMenuHandler = () => {
     setIsMenuOpen((prev) => !prev);
   };
 
+  const clickScrollToTop = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  const clickChangeMoveHandler = (name: string) => {
+    navigate(`/#${name}`);
+  };
+
+  useEffect(() => {
+    const hash = location.hash;
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  }, [location]);
+
   return (
     <header className="w-full fixed  z-30 bg-white h-[85px]">
       {/* header nav 부분 */}
       <div className="flex items-center justify-between md:justify-around sm:justify-between p-6 w-full">
-        <h1 className="text-3xl">PJS's Portfolio</h1>
+        <h1 className="text-3xl">
+          <button onClick={clickScrollToTop}>PJS's Portfolio</button>
+        </h1>
 
         {/* desktop Menu view */}
         <nav className="hidden md:block">
           <ul className="flex gap-5 text-lg">
             <li className="relative text-gray-500 hover:text-gray-900 transition duration-300">
-              <a href={"#about"}>About me</a>
+              {pathname === "/" ? <a href={"#about"}>About me</a> : <button onClick={() => clickChangeMoveHandler("about")}>About me</button>}
             </li>
             <li className="relative text-gray-500 hover:text-gray-900 transition duration-300">
-              <a href="#skills">Skills</a>
+              {pathname === "/" ? <a href={"#skills"}>Skills</a> : <button onClick={() => clickChangeMoveHandler("skills")}>Skills</button>}
             </li>
             <li className="relative text-gray-500 hover:text-gray-900 transition duration-300">
-              <a href={"#archiving"}>Archiving</a>
+              {pathname === "/" ? <a href={"#archiving"}>Archiving</a> : <button onClick={() => clickChangeMoveHandler("archiving")}>Archiving</button>}
             </li>
             <li className="relative text-gray-500 hover:text-gray-900 transition duration-300">
-              <a href="#projects">Project</a>
+              {pathname === "/" ? <a href={"#projects"}>Projects</a> : <button onClick={() => clickChangeMoveHandler("project")}>Projects</button>}
             </li>
             <li className="relative text-gray-500 hover:text-gray-900 transition duration-300">
-              <a href="#education">Education</a>
+              {pathname === "/" ? <a href={"#education"}>Education</a> : <button onClick={() => clickChangeMoveHandler("education")}>Education</button>}
             </li>
             <li className="relative text-gray-500 hover:text-gray-900 transition duration-300">
-              <a href="#contact">Contact</a>
+              {pathname === "/" ? <a href={"#contact"}>Contact</a> : <button onClick={() => clickChangeMoveHandler("contact")}>Contact</button>}
             </li>
           </ul>
         </nav>
@@ -49,22 +86,22 @@ const Header: React.FC = () => {
         <nav className="md:hidden  pr-6 pt-3  h-[320px] border shadow-lg bg-white">
           <ul className="flex flex-col gap-5 text-lg items-end ">
             <li className="relative text-gray-500 hover:text-gray-900 transition duration-300">
-              <a href={"#about"}>About me</a>
+              {pathname === "/" ? <a href={"#about"}>About me</a> : <button onClick={() => clickChangeMoveHandler("about")}>About me</button>}
             </li>
             <li className="relative text-gray-500 hover:text-gray-900 transition duration-300">
-              <a href="#skills">Skills</a>
+              {pathname === "/" ? <a href={"#skills"}>Skills</a> : <button onClick={() => clickChangeMoveHandler("skills")}>Skills</button>}
             </li>
             <li className="relative text-gray-500 hover:text-gray-900 transition duration-300">
-              <a href={"#archiving"}>Archiving</a>
+              {pathname === "/" ? <a href={"#archiving"}>Archiving</a> : <button onClick={() => clickChangeMoveHandler("archiving")}>Archiving</button>}
             </li>
             <li className="relative text-gray-500 hover:text-gray-900 transition duration-300">
-              <a href="#projects">Project</a>
+              {pathname === "/" ? <a href={"#projects"}>Projects</a> : <button onClick={() => clickChangeMoveHandler("project")}>Projects</button>}
             </li>
             <li className="relative text-gray-500 hover:text-gray-900 transition duration-300">
-              <a href="#education">Education</a>
+              {pathname === "/" ? <a href={"#education"}>Education</a> : <button onClick={() => clickChangeMoveHandler("education")}>Education</button>}
             </li>
             <li className="relative text-gray-500 hover:text-gray-900 transition duration-300">
-              <a href="#contact">Contact</a>
+              {pathname === "/" ? <a href={"#contact"}>Contact</a> : <button onClick={() => clickChangeMoveHandler("contact")}>Contact</button>}
             </li>
           </ul>
         </nav>

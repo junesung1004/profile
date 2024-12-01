@@ -1,10 +1,11 @@
 interface AboutMeProps {
   about: string;
+  aboutRef: React.RefObject<HTMLInputElement>;
 }
 
-const AboutMe: React.FC<AboutMeProps> = ({ about }) => {
+const AboutMe: React.FC<AboutMeProps> = ({ about, aboutRef }) => {
   return (
-    <div id={about} className="flex flex-col  items-center w-9/12 gap-4 p-10 border m-auto shadow-xl min-w-[300px] scroll-mt-[95px] ">
+    <div id={about} ref={aboutRef} className="flex flex-col  items-center w-9/12 gap-4 p-10 border m-auto shadow-xl min-w-[300px] scroll-mt-[95px] ">
       {/* about me logo */}
       <h1 className="text-2xl sm:text-6xl font-bold mb-4 sm:mb-20 hide">🔗 ABOUT ME</h1>
 

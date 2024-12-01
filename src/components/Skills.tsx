@@ -3,9 +3,10 @@ import "./Skills.css";
 
 interface SkillsProps {
   skills: string;
+  skillsRef: React.RefObject<HTMLInputElement>;
 }
 
-const Skills: React.FC<SkillsProps> = ({ skills }) => {
+const Skills: React.FC<SkillsProps> = ({ skills, skillsRef }) => {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -21,7 +22,7 @@ const Skills: React.FC<SkillsProps> = ({ skills }) => {
   }, []);
 
   return (
-    <section id={skills} className="flex flex-col justify-center items-center w-7/12 mb-32 p-30 m-auto scroll-mt-[85px]">
+    <section ref={skillsRef} id={skills} className="flex flex-col justify-center items-center w-7/12 mb-32 p-30 m-auto scroll-mt-[85px]">
       <h1 className="text-2xl sm:text-6xl font-bold mb-20 hide">⚡ Skills</h1>
       <article className="hidden flex-col w-full gap-6 lg:flex mb-20">
         {/* 하나의 아이템 */}

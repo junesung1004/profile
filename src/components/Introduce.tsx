@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Typing from "./Typing";
 
 const Introduce: React.FC = () => {
@@ -18,7 +19,7 @@ const Introduce: React.FC = () => {
         </p>
       </article>
       <button className="w-40 h-16 rounded-full bg-teal-200 transition duration-500 hover:bg-teal-400 text-white">
-        <a href="#about">더 알아보기 ↓</a>
+        <Link to={"/coverletter"}>자소서 click me!</Link>
       </button>
     </section>
   );
