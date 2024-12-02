@@ -26,13 +26,13 @@ const Home: React.FC = () => {
       <Dash />
       <Skills skills={"skills"} skillsRef={skillsRef} />
       {/* <Dash /> */}
-      <Archiving archiving={"archiving"} />
+      <Archiving archiving={"archiving"} archivingRef={archivingRef} />
       {/* <Dash /> */}
-      <Projects projects={"projects"} />
+      <Projects projects={"projects"} projectsRef={projectsRef} />
       {/* <Dash /> */}
-      <Education education={"education"} />
+      <Education education={"education"} educationRef={educationRef} />
       {/* <Dash /> */}
-      <Contact contact={"contact"} />
+      <Contact contact={"contact"} contactRef={contactRef} />
       <Bubbles /> {/* 배경화면 컴포넌트 */}
     </div>
   );

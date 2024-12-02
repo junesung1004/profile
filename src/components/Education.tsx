@@ -1,10 +1,11 @@
 interface EducationProps {
   education: string;
+  educationRef: React.RefObject<HTMLInputElement>;
 }
 
-const Education: React.FC<EducationProps> = ({ education }) => {
+const Education: React.FC<EducationProps> = ({ education, educationRef }) => {
   return (
-    <section id={education} className="flex flex-col  justify-center items-center gap-16 w-full mb-32  m-auto p-32 bg-[rgba(0,0,0,0.5)] scroll-mt-[85px]">
+    <section ref={educationRef} id={education} className="flex flex-col  justify-center items-center gap-16 w-full mb-32  m-auto p-32 bg-[rgba(0,0,0,0.5)] scroll-mt-[85px]">
       <h1 className="text-2xl sm:text-6xl font-bold mb-0 sm:mb-20 hide w-[330px] text-center ">🔥 Education</h1>
 
       {/* 하나의 폼 */}

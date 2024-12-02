@@ -16,7 +16,7 @@ const Header: React.FC = () => {
   const clickScrollToTop = (e: React.MouseEvent) => {
     e.preventDefault();
 
-    if (pathname === "coverletter") {
+    if (pathname === "/coverletter") {
       navigate("/");
     } else {
       window.scrollTo({

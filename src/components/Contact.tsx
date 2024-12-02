@@ -1,10 +1,11 @@
 interface ContactProps {
   contact: string;
+  contactRef: React.RefObject<HTMLInputElement>;
 }
 
-const Contact: React.FC<ContactProps> = ({ contact }) => {
+const Contact: React.FC<ContactProps> = ({ contact, contactRef }) => {
   return (
-    <section id={contact} className="flex flex-col  justify-center items-center gap-16 w-full mb-32  m-auto pb-16 p-10 scroll-mt-[85px]">
+    <section ref={contactRef} id={contact} className="flex flex-col  justify-center items-center gap-16 w-full mb-32  m-auto pb-16 p-10 scroll-mt-[85px]">
       <h1 className="text-2xl sm:text-6xl font-bold mb-0 sm:mb-20 hide w-[330px] text-center ">📧 Contact</h1>
 
       <article className="flex flex-wrap items-center gap-16">
