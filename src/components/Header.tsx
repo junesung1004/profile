@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const Header: React.FC = () => {
@@ -8,13 +8,6 @@ const Header: React.FC = () => {
   const { pathname } = useLocation();
   console.log("pathname : ", pathname);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  // const aboutRef = useRef<HTMLDivElement>(null);
-  // const skillsRef = useRef<HTMLDivElement>(null);
-  // const archivingRef = useRef<HTMLDivElement>(null);
-  // const projectsRef = useRef<HTMLDivElement>(null);
-  // const educationRef = useRef<HTMLDivElement>(null);
-  // const contactRef = useRef<HTMLDivElement>(null);
 
   const clickToggleMenuHandler = () => {
     setIsMenuOpen((prev) => !prev);
