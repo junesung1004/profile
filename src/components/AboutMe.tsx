@@ -51,7 +51,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ about, aboutRef }) => {
           {/* 하나의 아이템 */}
           <li className="flex items-center gap-6">
             <p className="text-xl sm:text-3xl">💲</p>
-            <p className="text-base sm:text-xl">희망연봉 : 2900↑</p>
+            <p className="text-base sm:text-xl">희망연봉 : 3000↑</p>
           </li>
         </ul>
       </div>
