@@ -13,7 +13,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ about, aboutRef }) => {
       <div className="w-full  flex flex-wrap justify-center gap-8 sm:gap-16">
         {/* 프로필이미지 */}
         <div className="flex ">
-          <img className="rounded-3xl shadow-2xl" src={process.env.PUBLIC_URL + "/images/junesung.jpg"} alt="이미지" width={"320px"} height={"360px"} />
+          <img className="rounded-3xl shadow-2xl" src={process.env.PUBLIC_URL + "/images/junesung.jpg"} alt="이미지" width={"450px"} height={"360px"} />
         </div>
 
         {/* introduce */}
