@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 
 const Typing: React.FC = () => {
   const firstText = "안녕하세요 :)";
-  const twoText = "Frontend 개발자 박준성입니다.";
+  const twoText = "꿈을 코딩하는 개발자 박준성입니다.";
 
   const [firstTyping, setFirstTyping] = useState(""); // 첫 번째 텍스트 상태
   const [twoTyping, setTwoTyping] = useState(""); // 두 번째 텍스트 상태
