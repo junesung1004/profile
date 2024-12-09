@@ -24,7 +24,6 @@ const CoverLetter: React.FC = () => {
         </section>
         <hr className="my-10" />
         <section className="flex flex-col gap-6  justify-center m-auto">
-          <h2 className="text-xl font-bold">지원동기</h2>
           <h2 className="text-xl font-bold">기술적 역량</h2>
           <p className="text-base leading-loose">
             <strong>HTML</strong> : 시멘틱 태그를 활용하여 코드의 구조를 명확하게 파악할 수 있도록 마크업합니다. 이를 통해 코드의 가독성을 높이고, 유지보수성을 향상시킵니다.
